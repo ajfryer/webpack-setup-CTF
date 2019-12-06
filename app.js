@@ -9,6 +9,10 @@ function formatQueryParams(params) {
 
 // writes the trend following strategy results to DOM
 function displayResults(symbol, strategyData) {
+  $('#current-position').empty();
+  $('#allocation-chart').empty();
+  $('#backtest-chart').empty();
+  console.log('rendering results');
   //
   const dates = strategyData.dates;
   const benchmark = strategyData.totalReturns;
