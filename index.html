@@ -32,70 +32,47 @@
           - and it's free!
         </p>
         <button class="get-started-button">Get Started</button>
-        <form action="" id="strategy-form" class="hidden">
-          <label for="lookback" class="tooltip">Select a Crypto:<span class="tooltiptext">This is the tooltip text</span></label>
-          <label for="symbol"></label>
-          <select name="symbol" id="symbol">
-            <option value="btc">btc</option>
-            <option value="eth">eth</option>
-            <option value="ltc">ltc</option>
-          </select>
-          
-          <label for="lookback" class="tooltip">Lookback Period (10-365 days):<span class="tooltiptext">This is the tooltip text</span></label>
-          <input type="number" id="lookback" name="lookback" min="10" max="365" value="260">
-          
-          <label for="volatility">Target Volatility (0 - 1):</label>
-          <input type="number" id="volatility" name="volatility" min="0" max="1" step="0.05" value=".65">
-          
-          <label for="leverage">Max Leverage (1-10):</label>
-          <input type="number" id="leverage" name="leverage" min="1" max="4" value="1">
-
-          <label for="shorting">Allow Shorting?</label>
-          <input type="checkbox" id="shorting" name="shorting"
-          checked>
-          
-          <button id="form-submit-button" type="submit">get Strategy</button>
-        </form>
       </div>
     </header>
 
     <section id="app-form" class="hidden">
-      <div class="container">
-        <form action="" id="strategy-form" >
-          <label for="symbol" class="">
-            Select a Crypto:
-            <i class="material-icons tooltip">
-              info
-            </i>
-            <span class="tooltiptext">This is the tooltip text</span>
-          </label>
-          <select name="symbol" id="symbol">
-            <option value="btc">btc</option>
-            <option value="eth">eth</option>
-            <option value="ltc">ltc</option>
-          </select>
-
-          <label for="lookback" class="">
-            Lookback Period (10-365 days):
-            <i class="material-icons tooltip">
-              info
-            </i>
-            <span class="tooltiptext">This is the tooltip text</span>
-          </label>
-          <input type="number" id="lookback" name="lookback" min="10" max="365" value="260">
-          
-          <label for="volatility">Target Volatility (0 - 1):</label>
-          <input type="number" id="volatility" name="volatility" min="0" max="1" step="0.05" value=".65">
-          
-          <label for="leverage">Max Leverage (1-10):</label>
-          <input type="number" id="leverage" name="leverage" min="1" max="4" value="1">
-
-          <label for="shorting">Allow Shorting?</label>
-          <input type="checkbox" id="shorting" name="shorting"
-          checked>
-          
-          <button id="form-submit-button" type="submit">get Strategy</button>
+      <div class="container" >
+        <form id="strategy-form" action="">
+          <div class="form-box">
+              <label for="symbol" class="">
+                  Select a Crypto:
+                </label>
+                <select name="symbol" id="symbol">
+                  <option value="btc">btc</option>
+                  <option value="eth">eth</option>
+                  <option value="ltc">ltc</option>
+                </select>
+          </div>
+          <div class="form-box">
+              <label for="lookback" class="">
+                  Lookback Period<br>(10-365 days):
+                </label>
+                <input type="number" id="lookback" name="lookback" min="10" max="365" value="260">           
+            </div>
+          <div class="form-box">
+              <label for="volatility">Target Volatility<br> (0 - 1):</label>
+              <input type="number" id="volatility" name="volatility" min="0" max="1" step="0.05" value=".65">
+            </div>
+          <div class="form-box">
+              <label for="leverage">Max Leverage<br> (1-10):</label>
+              <input type="number" id="leverage" name="leverage" min="1" max="4" value="1">       
+            </div>
+          <div class="form-box">
+              <label for="shorting">Allow Shorting?</label>
+              <input type="checkbox" id="shorting" name="shorting"
+              checked>
+            </div>
+          <div class="form-box">
+              <button id="form-submit-button" type="submit">Build Strategy</button>
+              <button class="starter-strategy-button">Starter Strategy</button>
+          </div>
         </form>
+
       </div>
     </section>
     
@@ -108,16 +85,13 @@
         <div class="results-card">
           <h4>Current Position</h4>
           <p id="current-position"></p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat omnis, accusamus sint iure quam quia pariatur minus eligendi? Hic, facere quos? Sed, in nulla. Dolores sequi possimus enim nisi dicta!</p>
         </div>
         <div class="results-card">
-            <h4>Current Allocation</h4>
-            <canvas id="allocation-chart"></canvas>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat omnis, accusamus sint iure quam quia pariatur minus eligendi? Hic, facere quos? Sed, in nulla. Dolores sequi possimus enim nisi dicta!</p>
+          <h4>Current Allocation</h4>
+          <canvas id="allocation-chart"></canvas>
           </div>
         <div class="results-card">
-            <h4>Historical Backtest</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat omnis, accusamus sint iure quam quia pariatur minus eligendi? Hic, facere quos? Sed, in nulla. Dolores sequi possimus enim nisi dicta!</p>
+          <h4>Historical Backtest</h4>
           <canvas id="backtest-chart"></canvas>
         </div>
       </div>

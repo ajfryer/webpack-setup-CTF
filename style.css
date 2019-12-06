@@ -221,31 +221,6 @@ Header
   margin: 0 auto;
 }
 
-.tooltip {
-  color: var(--white);
-  font-size: 1rem; /* If you want dots under the hoverable text */
-}
-
-/* Tooltip text */
-.tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover + .tooltiptext {
-  visibility: visible;
-}
-
 /*
 hodl-alternative section
 */
@@ -391,7 +366,7 @@ app-form
 */
 
 #app-form {
-  background-color: transparent;
+  background-color: var(--gray);
   color: var(--black);
   margin-top: 70px;
   padding: 50px 0 150px 0;
@@ -401,14 +376,68 @@ app-form
 #app-form .container {
   background-color: var(--white);
   padding: 1rem;
-  max-width: 300px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
 #app-form form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
 }
+
+#app-form .form-box {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .5rem;
+  border-right: 1px dotted black;
+  border-left: 1px dotted black;
+}
+
+#app-form form select {
+  width: auto;
+}
+
+#app-form form label {
+  margin-bottom: 1rem;
+}
+
+#app-form button {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 15px;
+  line-height: 1.33333333;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 10px 16px;
+  font-size: 19px;
+  line-height: 1.33;
+  border-radius: 4px;
+  color: var(--white);
+  background-color: var(--gray);
+  border-color: var(--gray);
+  max-width: 300px;
+}
+
+#app-form button.starter-strategy-button {
+  background-color: inherit;
+  color: var(--gray);
+}
+
 
 /* 
 app-form
@@ -433,87 +462,12 @@ margin: 0;
 }
 
 #app-results .results-card {
-  border-radius: 5px;
+  border-radius: 2px;
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: var(--white);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-
-
-
-
-
-
-
-
-
-/* 
-Side Drawer
-*/
-/* The side navigation menu */
-.side-drawer {
-  height: 100%; /* 100% Full-height */
-  width: 75vw; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 3; /* Stay on top */
-  top: 0; /* Stay at the top */
-  right: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.side-drawer a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.side-drawer a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.side-drawer .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .side-drawer {padding-top: 15px;}
-  .side-drawer a {font-size: 18px;}
-}
-
-
-/*
-Overlay
-*/
-#overlay {
-  position: fixed; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-  transition: display 5s ease;
 }
 
 
