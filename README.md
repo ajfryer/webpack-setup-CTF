@@ -2,9 +2,9 @@
 Do more than HODL.
 
 Crypto Trend Following is a cryptocurrency investment strategy inspired by large hedge funds. It seeks to protect capital in bear markets, take profits during bull markets, and avoid black swans that make many coins worthless.
-- and it's free!
++ it's free!
 
-Powered by the [ALPHAVANTAGE api](https://www.alphavantage.co/)
+Powered by the [alphavantage api](https://www.alphavantage.co/)
 
 ## Install
 `yarn install`
