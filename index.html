@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="shortcut icon" href="#">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+<link href="main.css?4192b529224119e647e0" rel="stylesheet"></head>
+<body id="index" data-app="index">
+  
+  <main>
+    <nav class="top-nav hidden" id="nav">
+      <div class="container">
+        <a href="index.html" class="logo" id="">
+            <!--<img src="img/logo-black.png" alt="" class="logo">-->
+            Crypto Trend Following 
+        </a>
+        <a href="?page=single-market-portfolio" class="get-started-button" id="nav-get-started-button">Get Started</a>
+      </div>
+    </nav>
+  
+    <header>
+      <div class="container">
+        <h1 class="splash-tagline"><strong>Crypto Trend Following.</strong><br>
+        Do more than HODL.</h1>
+        <p class="splash-valueprop">
+          Crypto Trend Following is an investment strategy inspired by large hedge funds. It seeks to protect capital in bear markets, take profits during bull markets, and avoid black swans that make many coins worthless.<br>
+          - and it's free!
+        </p>
+        <a href="?page=single-market-portfolio" class="get-started-button">Get Started</a>
+      </div>
+    </header>
+
+    <section id="app-form" class="hidden">
+        <div class="container" >
+          <form id="strategy-form" action="">
+            <div class="form-box">
+                <label for="symbol" class="">
+                    Select a Crypto:
+                  </label>
+                  <select name="symbol" id="symbol" required>
+                    <option value="btc">btc</option>
+                    <option value="eth">eth</option>
+                    <option value="ltc">ltc</option>
+                  </select>
+            </div>
+            <div class="form-box">
+                <label for="lookback" class="">
+                    Lookback Period<br>(10-365 days):
+                  </label>
+                  <input type="number" id="lookback" name="lookback" min="10" max="365" value="260" required>           
+              </div>
+            <div class="form-box">
+                <label for="volatility">Target Volatility<br> (0 - 1):</label>
+                <input type="number" id="volatility" name="volatility" min="0" max="1" step="0.05" value=".65" required>
+              </div>
+            <div class="form-box">
+                <label for="leverage">Max Leverage<br> (1-10):</label>
+                <input type="number" id="leverage" name="leverage" min="1" max="4" value="1" required>       
+              </div>
+            <div class="form-box">
+                <label for="shorting">Allow Shorting?</label>
+                <input type="checkbox" id="shorting" name="shorting" checked required>
+              </div>
+            <div class="form-box">
+                <button id="form-submit-button" type="submit">Build Strategy</button>
+                <button class="starter-strategy-button">Starter Strategy</button>
+            </div>
+          </form>
+  
+        </div>
+    </section>
+      
+    <section id="app-results" class="hidden">
+      <div class="container">
+        <div class="results-card">
+            <h3>Results</h3>
+        <p id="error-message" class="error-message hidden"></p>
+        </div>
+        <div class="results-card">
+          <h4>Current Position</h4>
+          <p id="current-position"></p>
+        </div>
+        <div class="results-card">
+          <h4>Current Allocation</h4>
+          <canvas id="allocation-chart"></canvas>
+          </div>
+        <div class="results-card">
+          <h4>Historical Backtest</h4>
+          <canvas id="backtest-chart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section id="hodl-alternative">
+      <div class="container">
+          <h2 class="title">
+            HODL isn't for everyone.<br>
+            At least not for 100% of your portfolio.
+          </h2>
+          <p>
+            Do you want to invest in cryptocurrency, but don't like the idea of gambling on coins that may boom or completely bust? (See <a href="https://deadcoins.com/">deadcoins.com</a>)
+          </p>
+          <p>
+            Trend following bets aggressively when markets are stable and trending and conservatively when markets are volatile and choppy.
+          </p>
+          <p>
+            We believe Trend Following can be an "all-weather" way to invest in crypto. It is designed for modest returns across bull and bear markets and to survive black swan events that kill many coins.
+          </p>
+          <p>
+            <strong>
+              If you want a risk-management-first way to invest in high-risk cryptocurrencies, it's worth considering diversifying your crypto portfolio with Trend Following!
+            </strong>
+          </p>
+      </div>
+
+    </section>
+
+    <section id="social-proof">
+      <div class="container">
+          <h2 class="title">
+              Large commodity & currency funds<br>
+              have trend followed for decades.
+            </h2>
+            <p>
+              Everyday, funds managing billions of dollars use diversified trend following strategies to trade all four major asset classes (stocks, bonds, currencies, commodities). 
+            </p>
+            <p>
+              Here's how they work: 
+            </p>
+            <ol>
+              <li>
+                the fund managers select a diversified universe of markets to trade from.
+              </li>
+              <li>
+                Each day, the fund rebalances. More money into markets with stable trends and less into markets with volatile non-trends.
+              </li>
+              <li>
+                Over time, the fund ends up betting heavily on the best trends, while actively avoiding sideways markets and markets going bust!
+              </li>
+            </ol>
+      </div>
+    </section>
+
+    <section id="call-to-action">
+      <div class="container">
+          <h2 class="title">
+            How does this site work?
+          </h2>
+          <h3 class="subtitle">Click Get Started</h3>
+          <p>
+            Crypto Trend Following is a free site that calculates how much crypto you should own in order to follow a Trend Following Strategy. We are not financial advisers and don't make any trades for you, but we provide the information on this site free of charge. Click Get Started to configure your own strategy.
+          </p>
+          <h3 class="subtitle">Easy Customization</h3>
+          <p>
+            Once you click Get Stated, you'll notice there's a couple different kinds of Trend Following. Choose the level of "Trend Speed", "volatility", "leverage", and "shorting", to match your situation. If you aren't sure what to choose, click the "Starter Strategy" button to get a standard strategy without having to customize.
+          </p>
+          <h3 class="subtitle">Great as a Diversifier, too!</h3>
+          <p>
+            Here's the thing: you don't have to put 100% of your cryptocurrency portfolio in Trend Following. Trend Following on a wide variety of coins can help diversify a portfolio of other strategies (like HODL, arbitrage, etc.) Add as little or as much Trend Following on as many different coins as you want.
+          </p>
+          <a href="market.html" class="get-started-button">Get Started</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p class="subtitle footer-lead">2019 Crypto Trend Following</p>
+
+          <h3 class="subtitle">About this site</h3>
+          <hr>
+          <p>
+            This is a free site powered by the terrific <a href="https://www.alphavantage.co/">alphaVantage api!</a> It's a pretty simple jquery app that fetches market data, calculates a basic trend following model, and gives you the highlights.
+          </p>
+
+          <h3 class="subtitle">Contact/Request a Feature</h3>
+          <hr>
+          <p>
+            Want a new coin added? Want to discuss the strategy? Want to chat about something else? <a href="mailto:alex.jeffrey.fryer@gmail.com">Email Me</a>
+          </p>
+
+          <h3 class="subtitle">Disclosure</h3>
+          <hr>
+          <p class="last">
+            This site doesn't manage money for you. It is just a mathematical model that we publish. If you choose to execute a strategy like anything you see on this site, please understand that you may lose all your money. You also will not become Winton Capital following anything you read or see on this site. Everything on this site is just for informational purposes. Unless you are working with a professional, all trading you do is always at your own risk. We don't claim that any data on this site is correct nor has it been audited. But we are trying really hard to put out quality work. If you spot errors, please let us know!
+          </p>
+
+      </div>
+    </footer>
+  </main>
+
+<script type="text/javascript" src="bundle.js?4192b529224119e647e0"></script></body>
+</html>
