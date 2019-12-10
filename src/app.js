@@ -29,6 +29,7 @@ const $lookback = $('#lookback');
 const $volatility = $('#volatility');
 const $leverage = $('#leverage');
 const $shorting = $('#shorting');
+const $message = $('#message');
 const $currentPosition = $('#current-position');
 const $allocationChart = $('#allocation-chart');
 const $backtestChart = $('#backtest-chart');
@@ -38,6 +39,7 @@ function displayResults(symbol, strategyData) {
   $currentPosition.empty();
   $allocationChart.empty();
   $backtestChart.empty();
+  $message.empty();
 
   const dates = strategyData.dates;
   const benchmark = strategyData.totalReturns;
@@ -143,16 +145,20 @@ async function fetchData(symbol, lookback, volatility, leverage, shorting) {
     }
     throw new Error(response.statusText);
   } catch (error) {
-    console.log(`Something went wrong: ${error.message}`);
+    $message.html(`Something went wrong: ${error.message}`);
   }
 }
 
 /* handles submit events */
-async function submitHandler (event) { 
+async function submitHandler (event) {
+  console.log('running submithandler'); 
   event.preventDefault();
   
   /* check to make sure the form is correct */
   if ($(event.target).attr('id') !== 'strategy-form') return;
+
+  /* notify the user with loading message */
+  $message.text(`Loading. Please wait.`);
   
   /* get form inputs and do fallback form validation */
   const symbol = $symbol.val();
@@ -181,6 +187,7 @@ async function submitHandler (event) {
 
   /* Display the strategy data */
   displayResults(symbol, strategyData);
+
 };
 
 /* handles click events */
