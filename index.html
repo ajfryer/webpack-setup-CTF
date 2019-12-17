@@ -8,14 +8,14 @@
     <link rel="shortcut icon" href="#">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
-<link href="main.css?e311d9c3f5e90c2308e7" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+<link href="main.css?c552f878cd37f79e57b6" rel="stylesheet"></head>
 <body id="index" data-app="index">
   
-  <main>
-    <nav class="top-nav hidden" id="nav">
+  <main class="col-12-grid">  
+    <nav class="invisible" id="nav">
       <div class="container">
         <a href="index.html" class="logo" id="">
-            <!--<img src="img/logo-black.png" alt="" class="logo">-->
             Crypto Trend Following 
         </a>
         <a href="?page=single-market-portfolio" class="get-started-button" id="nav-get-started-button">Get Started</a>
@@ -23,23 +23,105 @@
     </nav>
   
     <header>
-      <div class="container">
-        <h1 class="splash-tagline"><strong>Crypto Trend Following.</strong><br>
-        Do more than HODL.</h1>
-        <p class="splash-valueprop">
-          Crypto Trend Following is an investment strategy inspired by large hedge funds. It seeks to protect capital in bear markets, take profits during bull markets, and manage black swans that make many coins worthless.<br>
-          - and it's free!
-        </p>
-        <a href="" class="get-started-button">Get Started</a>
+      <div class="container col-12-grid">
+        <div class="header-img">
+          <img src="img/hero-img-blue-2.svg" alt="">
+        </div>
+        <div class="header-txt">
+          <h1 class="splash-tagline"><span>Crypto Trend Following</span><br>
+          Do more than HODL.</h1>
+          <p class="splash-valueprop">
+            Crypto Trend Following is a cryptocurrency investment strategy inspired by hedge funds. It seeks modest returns across bull, bear, and black swan markets.<br>
+            <span class="its-free"> - and ours is free!</span>
+          </p>
+          <a href="" class="get-started-button">Get Started</a>
+        </div>
       </div>
     </header>
 
+    <section id="value">
+      <div class="container col-12-grid">
+        <div class="value-img">
+            <img src="img/pie-chart-blue.svg" alt="">
+        </div>
+        <div class="value-txt">
+          <h2 class="title">
+              HODL isn't for everyone.<br>
+              At least not for 100% of your portfolio.
+          </h2>
+          <p>          
+            Want to invest in cryptocurrency, but don't like the idea of investing 100% of your portfolio on a boom or bust HODL strategy?  
+          </p>
+          <p>
+            Trend Following uses active risk management to reduce volatility, while HODL strategies use passive risk management.
+          </p>
+          <p>
+            We believe Trend Following is an alternative way to invest in cryptos across bull, bear, and black swan markets.
+                <span>Consider diversifying your crypto portfolio with trend following.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="proof">
+      <div class="container col-12-grid">
+          <div class="proof-img">
+              <img src="img/pro-trader-blue.svg" alt="">
+          </div>
+          <div class="proof-txt">
+              <h2 class="title">
+                Large commodity & currency funds<br>
+                have trend followed for decades.
+              </h2>
+              <p>
+                Everyday, funds managing billions of dollars use trend following strategies to trade all four major asset classes (stocks, bonds, currencies, commodities). Here's how they work: 
+              </p>
+              <ol>
+                <li>
+                  The funds start by selecting a diversified universe of markets to trade. Sometimes they 
+                </li>
+                <li>
+                  Each day, funds actively manage risk. Markets with stable trends get more money than markets with volatile non-trends.
+                </li>
+                <li class="final-step">
+                  Over time, the fund ends up betting heavily on the largest trends, while actively avoiding sideways markets and markets going bust!
+                </li>
+              </ol>
+          </div>
+      </div>
+    </section>
+
+    <section id="call-to-action">
+      <div class="container">
+          <h2 class="title">
+            How does this site work?
+          </h2>
+          <img src="img/click-get-started.svg" alt="">
+          <h3 class="subtitle">Click Get Started</h3>
+          <p>
+            Crypto Trend Following is a free site that calculates a trend following for you. This site doesn't manage money for you. Click Get Started to configure your own strategy. 
+          </p>
+          <img src="img/easy-customization.svg" alt="">
+          <h3 class="subtitle">Easy Customization</h3>
+          <p>
+            Customize the "Trend Speed", "volatility", "leverage", and "shorting" of your trend following strategy. If you aren't sure what to choose, click the "Starter Strategy" button.
+          </p>
+          <img src="img/great-diversifier-blue.svg" alt="">
+          <h3 class="subtitle">Great as a Diversifier, too!</h3>
+          <p>
+            Trend Following doesn't have to be 100% of your crypto portfolio because it can help diversify your existing portfolio. Add as little or as much Trend Following as you want.
+          </p>
+          <a href="market.html" class="get-started-button">Get Started</a>
+      </div>
+    </section>
+
     <section id="app-form" class="hidden">
         <div class="container" >
+          <h1>Single Market Portfolio</h1>
           <form id="strategy-form" action="">
             <div class="form-box">
                 <label for="symbol" class="">
-                    Select a Crypto:
+                    Select a<br> Cryptocurrency:
                   </label>
                   <select name="symbol" id="symbol" required>
                     <option value="btc">btc</option>
@@ -62,7 +144,7 @@
                 <input type="number" id="leverage" name="leverage" min="1" max="4" value="1" required>       
               </div>
             <div class="form-box">
-                <label for="shorting">Allow Shorting?</label>
+                <label for="shorting">Allow<br> Shorting?</label>
                 <input type="checkbox" id="shorting" name="shorting">
               </div>
             <div class="form-box">
@@ -76,93 +158,23 @@
       
     <section id="app-results" class="hidden">
       <div class="container">
-        <div class="results-card">
-          <h3>Results</h3>
-          <p id="message" class="message">Nothing to see here yet. Click Build Strategy or Starter Strategy to get started.</p>
-        </div>
+        <h2>Results</h2>
+        <hr>
         <div class="results-card">
           <h4>Current Position</h4>
           <p id="current-position"></p>
+          <p class="message">Nothing to see here yet. Click Build Strategy or Starter Strategy to get started.</p>
         </div>
         <div class="results-card">
           <h4>Current Allocation</h4>
+          <p id="message" class="message">Nothing to see here yet. Click Build Strategy or Starter Strategy to get started.</p>
           <canvas id="allocation-chart"></canvas>
           </div>
         <div class="results-card">
           <h4>Historical Backtest</h4>
+          <p id="message" class="message">Nothing to see here yet. Click Build Strategy or Starter Strategy to get started.</p>
           <canvas id="backtest-chart"></canvas>
         </div>
-      </div>
-    </section>
-
-    <section id="hodl-alternative">
-      <div class="container">
-          <h2 class="title">
-            HODL isn't for everyone.<br>
-            At least not for 100% of your portfolio.
-          </h2>
-          <p>
-            Do you want to invest in cryptocurrency, but don't like the idea of gambling on coins that may boom or completely bust? (See <a href="https://deadcoins.com/">deadcoins.com</a>)
-          </p>
-          <p>
-            Trend following bets aggressively when markets are stable and trending and conservatively when markets are volatile and choppy.
-          </p>
-          <p>
-            We believe Trend Following can be an "all-weather" way to invest in crypto. It is designed for modest returns across bull and bear markets and to survive black swan events that kill many coins.
-          </p>
-          <p>
-            <strong>
-              If you want a risk-management-first way to invest in high-risk cryptocurrencies, it's worth considering diversifying your crypto portfolio with Trend Following!
-            </strong>
-          </p>
-      </div>
-
-    </section>
-
-    <section id="social-proof">
-      <div class="container">
-          <h2 class="title">
-              Large commodity & currency funds<br>
-              have trend followed for decades.
-            </h2>
-            <p>
-              Everyday, funds managing billions of dollars use diversified trend following strategies to trade all four major asset classes (stocks, bonds, currencies, commodities). 
-            </p>
-            <p>
-              Here's how they work: 
-            </p>
-            <ol>
-              <li>
-                the fund managers select a diversified universe of markets to trade from.
-              </li>
-              <li>
-                Each day, the fund rebalances. More money into markets with stable trends and less into markets with volatile non-trends.
-              </li>
-              <li>
-                Over time, the fund ends up betting heavily on the best trends, while actively avoiding sideways markets and markets going bust!
-              </li>
-            </ol>
-      </div>
-    </section>
-
-    <section id="call-to-action">
-      <div class="container">
-          <h2 class="title">
-            How does this site work?
-          </h2>
-          <h3 class="subtitle">Click Get Started</h3>
-          <p>
-            Crypto Trend Following is a free site that calculates how much crypto you should own in order to follow a Trend Following Strategy. We are not financial advisers and don't make any trades for you, but we provide the information on this site free of charge. Click Get Started to configure your own strategy.
-          </p>
-          <h3 class="subtitle">Easy Customization</h3>
-          <p>
-            Once you click Get Stated, you'll notice there's a couple different kinds of Trend Following. Choose the level of "Trend Speed", "volatility", "leverage", and "shorting", to match your situation. If you aren't sure what to choose, click the "Starter Strategy" button to get a standard strategy without having to customize.
-          </p>
-          <h3 class="subtitle">Great as a Diversifier, too!</h3>
-          <p>
-            Here's the thing: you don't have to put 100% of your cryptocurrency portfolio in Trend Following. Trend Following on a wide variety of coins can help diversify a portfolio of other strategies (like HODL, arbitrage, etc.) Add as little or as much Trend Following on as many different coins as you want.
-          </p>
-          <a href="market.html" class="get-started-button">Get Started</a>
       </div>
     </section>
 
@@ -185,12 +197,13 @@
           <h3 class="subtitle">Disclosure</h3>
           <hr>
           <p class="last">
-            This site doesn't manage money for you. It is just a mathematical model that we publish. If you choose to execute a strategy like anything you see on this site, please understand that you may lose all your money. You also will not become Winton Capital following anything you read or see on this site. Everything on this site is just for informational purposes. Unless you are working with a professional, all trading you do is always at your own risk. We don't claim that any data on this site is correct nor has it been audited. But we are trying really hard to put out quality work. If you spot errors, please let us know!
+            This site doesn't manage money for you. It is just a mathematical model that we publish. If you choose to execute a strategy like anything you see on this site, please understand that you may lose all your money. You also will not become Bridgewater following anything you read or see on this site. Everything on this site is just for informational purposes. Unless you are working with a professional, all trading you do is always at your own risk. We don't claim that any data on this site is correct nor has it been audited. But we are trying really hard to put out quality work. If you spot errors, please let us know!
           </p>
 
       </div>
     </footer>
+  -->
   </main>
 
-<script type="text/javascript" src="bundle.js?e311d9c3f5e90c2308e7"></script></body>
+<script type="text/javascript" src="bundle.js?c552f878cd37f79e57b6"></script></body>
 </html>
